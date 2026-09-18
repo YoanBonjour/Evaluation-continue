@@ -19,7 +19,7 @@
       <button class="btn secondary">Label</button>
       <button class="btn secondary btn-small">Label</button>
     </div> -->
-    <div class="card-container">
+    <!-- <div class="card-container">
       <div class="card">
         <img
           src="/src/img/sanFrancisco.png"
@@ -218,6 +218,33 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="filter">
+      <div class="filter-title">Start booking your flight now</div>
+      <form class="filter-inputs" action="">
+        <div class="filter-fieldset-1">
+          <input type="radio" id="filter-input-radio-1" />
+          <label for="filter-input-radio-1">One way</label>
+          <input type="radio" id="filter-input-radio-2" />
+          <label for="filter-input-radio-2">Round trip</label>
+        </div>
+        <div class="filter-fieldset-2">
+          <div class="filter-destination">
+            <input type="text" autocomplete="country-name" />
+            <input type="text" autocomplete="country-name" />
+          </div>
+          <div class="filter-from">
+            <input type="date" />
+          </div>
+          <div class="filter-until">
+            <input type="date" />
+          </div>
+          <div class="filter-passengers">
+            <input type="number" value="1" min="1" max="10" />
+          </div>
+          <input type="submit" class="btn" value="Search" />
+        </div>
+      </form>
     </div>
     <script src="js/main.js" type="module"></script>
   </body>
