@@ -56,12 +56,28 @@ label {
   gap: 4px;
 }
 
+.filter-switch-data {
+  background-color: var(--primary-900);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 1px 0;
+}
+
+.filter-switch-data-icon {
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+}
+
 .filter-destination {
   display: flex;
   gap: 32px;
   background-color: var(--primary-900-70);
   border-radius: 12px;
   padding: 8px;
+  align-items: center;
 }
 
 .filter-inputs {
@@ -84,4 +100,73 @@ label {
   background-color: var(--primary-900-70);
   border-radius: 12px;
   padding: 8px;
+}
+
+#filter-input-radio-1[type="radio"],
+#filter-input-radio-2[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.filter-radio-circle {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.filter-fieldset-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-radio-input {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="date"] {
+  position: relative;
+  padding: 8px 12px 8px 40px; /* espace à gauche pour l'icône */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='15' viewBox='0 0 17 15' fill='none'%3E%3Cpath d='M15 5.83333V4.16667C15 3.94565 14.9122 3.73369 14.7559 3.57741C14.5997 3.42113 14.3877 3.33333 14.1667 3.33333H13.3333V4.16667C13.3333 4.38768 13.2455 4.59964 13.0892 4.75593C12.933 4.9122 12.721 5 12.5 5C12.279 5 12.067 4.9122 11.9107 4.75593C11.7545 4.59964 11.6667 4.38768 11.6667 4.16667V3.33333H5V4.16667C5 4.38768 4.9122 4.59964 4.75592 4.75593C4.59964 4.9122 4.38768 5 4.16667 5C3.94565 5 3.73369 4.9122 3.57741 4.75593C3.42113 4.59964 3.33333 4.38768 3.33333 4.16667V3.33333H2.5C2.27898 3.33333 2.06702 3.42113 1.91074 3.57741C1.75447 3.73369 1.66667 3.94565 1.66667 4.16667V5.83333H15ZM15 7.5H1.66667V12.5C1.66667 12.721 1.75447 12.933 1.91074 13.0892C2.06702 13.2455 2.27898 13.3333 2.5 13.3333H14.1667C14.3877 13.3333 14.5997 13.2455 14.7559 13.0892C14.9122 12.933 15 12.721 15 12.5V7.5ZM13.3333 1.66667H14.1667C14.8297 1.66667 15.4656 1.93006 15.9344 2.3989C16.4032 2.86774 16.6667 3.50362 16.6667 4.16667V12.5C16.6667 13.163 16.4032 13.7989 15.9344 14.2677C15.4656 14.7366 14.8297 15 14.1667 15H2.5C1.83696 15 1.20107 14.7366 0.732233 14.2677C0.263392 13.7989 0 13.163 0 12.5V4.16667C0 3.50362 0.263392 2.86774 0.732233 2.3989C1.20107 1.93006 1.83696 1.66667 2.5 1.66667H3.33333V0.833333C3.33333 0.612317 3.42113 0.400358 3.57741 0.244075C3.73369 0.0878001 3.94565 0 4.16667 0C4.38768 0 4.59964 0.0878001 4.75592 0.244075C4.9122 0.400358 5 0.612317 5 0.833333V1.66667H11.6667V0.833333C11.6667 0.612317 11.7545 0.400358 11.9107 0.244075C12.067 0.0878001 12.279 0 12.5 0C12.721 0 12.933 0.0878001 13.0892 0.244075C13.2455 0.400358 13.3333 0.612317 13.3333 0.833333V1.66667Z' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  color: var(--primary-0);
+}
+
+#filter-from-date-input,
+#filter-until-input {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  padding-left: 30px;
+  background-color: var(--primary-0-0);
+  border: none;
+  color: var(--primary-0);
 }
