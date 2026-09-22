@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  background-color: var(--primary-900-50);
+  width: fit-content;
+  margin: 10px 20px;
+  border-radius: 48px;
+  padding: 4px;
+}
+
+li {
+  padding: 16px 32px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: Montserrat;
+  color: var(--primary-0);
+  cursor: pointer;
+}
+
+.navigation-active {
+  color: var(--primary-900);
+  background-color: var(--primary-0);
+  border-radius: 32px;
+}
+
+li:hover {
+  background-color: var(--primary-0-10);
+  border-radius: 32px;
+}
